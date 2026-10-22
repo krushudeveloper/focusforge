@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Inlined so the icon resolves no matter which sub-path the site is served from. -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOSIgZmlsbD0iIzQ1NjhGNSIgLz4KICA8cGF0aAogICAgZD0iTTE2IDZjLjQgNC4yLTMuNCA1LjItMy40IDkuMSAwIDEuNi45IDIuNyAyIDMuMi0uMi0yLjQgMS40LTMuOSAyLjYtNC42LjIgMi4zIDEuOSAzIDEuOSA1LjMgMCAuNS0uMS45LS4zIDEuMyAxLjUtLjYgMi42LTIuMSAyLjYtNCAwLTMuNi0zLjctNC44LTUuNC0xMC4zWiIKICAgIGZpbGw9IiNmZmYiCiAgICBvcGFjaXR5PSIuOTIiCiAgLz4KICA8cGF0aAogICAgZD0iTTE0LjcgMjUuNWMtMS45IDAtMy40LTEuMy0zLjQtMy4yIDAtMi4yIDEuOS0zLjEgMi42LTQuOS45IDEuMyAxLjIgMi41IDEuMiAzLjYgMS4xLS4zIDEuOS0xIDIuMi0yLjEgMS4zIDEuMSAxLjggMi4zIDEuOCAzLjQgMCAxLjktMS41IDMuMi0zLjQgMy4yaC0xWiIKICAgIGZpbGw9IiNFRUU5RkYiCiAgLz4KPC9zdmc+Cg=="
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <meta
+      name="description"
+      content="FocusForge — plan your study sessions, run focused Pomodoro sprints, and watch your progress add up."
+    />
+    <title>FocusForge — Study with intent</title>
+    <script>
+      // Apply the saved theme before first paint to avoid a light flash.
+      try {
+        var saved = JSON.parse(localStorage.getItem('focusforge.state.v1') || 'null')
+        if (saved && saved.settings && saved.settings.theme === 'dark') {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      } catch (error) {
+        /* ignore unreadable storage */
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
